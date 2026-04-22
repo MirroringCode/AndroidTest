@@ -8,5 +8,24 @@
         android:id="@+id/firstFragment"
         android:name="com.example.myapplication.FirstFragment"
         android:label="fragment_first"
-        tools:layout="@layout/fragment_first" />
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/navigateToSecondFragment"
+            app:destination="@id/secondFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:exitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.myapplication.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/navigateToFirstFragment"
+            app:destination="@id/firstFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/firstFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

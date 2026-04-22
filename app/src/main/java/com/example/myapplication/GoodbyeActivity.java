@@ -22,7 +22,4 @@ public class GoodbyeActivity extends AppCompatActivity {
         });
     }
 
-    public void navigator() {
-        Log.d("GoodbyeActivity", "Goodbye");
-    }
 }
